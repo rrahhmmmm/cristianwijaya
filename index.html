@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Wijaya</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo"> 
+            <img src="image/index/LOGO.svg">
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="product.html">Product</a>
+            <a href="about.html">About us</a>
+        </div>
+        
+        <div class="header-actions">
+            <div class="cart-icon"> 
+                <img src="image/index/prime_shopping-cart.svg">
+            </div>
+            <button class="btn-primary">Join Event</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="image/index/BANNER.svg" alt="Fashion Models">
+        <p class="hero-title">CHRISTIAN WIJAYA</p>
+    </section>
+
+    <!-- Discover Section -->
+    <section class="discover">
+        <p class="section-title">
+            Discover New Collection
+        </p>
+        <div class="collection-grid">
+            <div class="collection-item">
+                <img src="image/index/FOOTWEAR.svg" alt="Footwear">
+                <p class="item-title">
+                    Footwear
+                </p>
+            </div>
+            <div class="collection-item">
+                <img src="image/index/APPAREL.svg" alt="High End Apparel">
+                <p class="item-title">
+                    High End Apparel
+                </p>
+            </div>
+            <div class="collection-item">
+                <img src="image/index/Group 32.svg" alt="Accessories">
+                <p class="item-title">
+                    Accessories
+                </p>
+            </div>
+        </div>
+        <div class="center-btn">
+            <a href="#" class="btn-outline">
+                Discover
+            </a>
+        </div>
+    </section>
+    
+    <!-- Model Section -->
+    <section class="model-section">
+        <div class="model-image">
+            <img src="image/index/model.svg" alt="Top Model Image">
+        </div>
+        <div class="model-content">
+            <p class="model-title">
+                Be the next our<br>Top Model
+            </p>
+            <button class="btn-outline-light">
+                Join Now
+            </button>
+        </div>
+    </section>
+    
+    <!-- Collections Section -->
+    <section class="collections">
+        <p class="section-title">
+            Christian Wijaya Collections
+        </p>
+        <div class="collection-grid">
+            <!-- Product 1 -->
+            <div class="collection-item">
+                <img src="image/index/baju.svg" alt="Knit Polo Shirt">
+                <p class="item-title">Knit Polo Shirt</p>
+            </div>
+            <!-- Product 2 -->
+            <div class="collection-item">
+                <img src="image/index/lovers.svg" alt="Black And White Loafers">
+                <p class="item-title">Black And White Loafers</p>
+            </div>
+            <!-- Product 3 -->
+            <div class="collection-item">
+                <img src="image/index/jacket.svg" alt="Carmy Jacket">
+                <p class="item-title">Carmy Jacket</p>
+            </div>
+        </div>
+        <!-- Discover Button -->
+        <div class="center-btn">
+            <a href="#" class="btn-outline">
+                Discover
+            </a>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about-banner">
+        <p class="about-title">
+            About Us
+        </p>
+    </section>
+    
+    <section class="about-content">
+        <div class="about-text">
+            <p>
+                Christian Wijaya is a luxury fashion brand celebrated for its timeless elegance and modern sophistication.
+                Known for blending classic styles with contemporary innovation, the brand crafts high-end apparel, accessories,
+                and footwear that exude exclusivity and refinement.
+            </p>
+            <div>
+                <a href="#" class="btn-outline">
+                    Discover
+                </a>
+            </div>
+        </div>
+        <div class="about-logo">
+            <img src="image/index/logob.svg" alt="CW Logo">
+        </div>
+    </section>
+    
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Our Story</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <a href="#">New Arrivals</a>
+                <a href="#">Best Sellers</a>
+                <a href="#">Collections</a>
+                <a href="#">Gift Cards</a>
+            </div>
+            <div class="footer-column">
+                <h3>Stay Connected</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon instagram">
+                        <img src="instagram-icon.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <img src="youtube-icon.svg" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Brand Footer -->
+    <footer class="brand-footer">
+        Christian Wijaya
+    </footer>
+
+    <script>
+        // Simple JavaScript for navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-links a');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Cart functionality
+            const cartIcon = document.querySelector('.cart-icon');
+            cartIcon.addEventListener('click', function() {
+                alert('Shopping cart will be implemented here');
+            });
+
+            // Join Event button
+            const joinBtn = document.querySelector('.btn-primary');
+            joinBtn.addEventListener('click', function() {
+                alert('Join Event form will be displayed here');
+            });
+
+            // Join Now button
+            const modelBtn = document.querySelector('.btn-outline-light');
+            modelBtn.addEventListener('click', function() {
+                alert('Model application form will be displayed here');
+            });
+
+            // Discover buttons
+            const discoverBtns = document.querySelectorAll('.btn-outline');
+            discoverBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Discover more collections here');
+                });
+            });
+
+            // Social icons hover effect
+            const socialIcons = document.querySelectorAll('.social-icon');
+            socialIcons.forEach(icon => {
+                icon.addEventListener('mouseover', function() {
+                    this.style.backgroundColor = '#D4AF37';
+                });
+                
+                icon.addEventListener('mouseout', function() {
+                    if (this.classList.contains('instagram')) {
+                        this.style.backgroundColor = '#F58529';
+                    } else if (this.classList.contains('youtube')) {
+                        this.style.backgroundColor = '#FF0000';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
