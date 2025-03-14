@@ -27,34 +27,83 @@
     </header>
 
     <!--lastest item-->
-        <section style="display: flex; align-items: center; justify-content: center; gap: 50px; padding: 60px; padding-bottom: 10rem; background-color: #F8F7F3;">
-            <div style="  padding: 20px; ">
-                <img src="image/product/flanel.svg" alt="Flannel Jacket" style="width: 350px; height: auto; display: block;">
-            </div>
-            <div style="max-width: 500px;">
-                <h2 style="font-size: 1.2rem; font-weight: 600; color: #1A1A1A;">Latest Item</h2>
-                <h1 style="font-size: 2.5rem; font-weight: bold; color: #1A1A1A;">Flannel Jacket</h1>
-                <p style="font-size: 1.5rem; color: #1A1A1A; font-weight: 100;">Rp 3.599.000</p>
-                <p style="font-size: 1rem; color: #1A1A1A; line-height: 1.5;">Stay cozy and stylish with our Flannel Jacket with Zipper, designed for both comfort and versatility. Made from premium flannel fabric, this jacket offers a soft and warm feel, perfect for layering during chilly days.</p>
-                <button style="background-color: #1A1A1A; color: #F8F7F3; border: none; padding: 15px 15rem; border-radius: 50px; font-size: 1rem; font-weight: 100; cursor: pointer; transition: all 0.3s ease; margin-top: 20px;">Buy Now</button>
-            </div>
-        </section>
+    <section style="
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 60px; 
+    padding-bottom: 10rem; 
+    background-color: #F8F7F3;
+">
+    <!-- Judul berada di tengah atas -->
+    <p style="font-size: 1.2rem;  font-weight: 600;  color: #1A1A1A; text-align: center;  margin-bottom: 30px; ">
+        Latest Item
+    </p>
 
-        <!--catalog-->
+    <div style=" display: flex;  align-items: center;  justify-content: center; gap: 130px; flex-direction: row;
+    ">
+        <!-- Gambar Produk -->
+        <div style="padding: 20px;">
+            <img src="image/product/flanel.svg" alt="Flannel Jacket" style="width: 350px; height: auto; display: block;">
+        </div>
+
+        <!-- Deskripsi Produk -->
+        <div style="max-width: 500px;">
+            <h1 style="font-size: 48px; font-weight: bold; color: #1A1A1A; ">Flannel Jacket</h1>
+            <p style="font-size: 32px; color: #1A1A1A; font-weight: 100; padding-top: -10rem;">Rp 3.599.000</p>
+            <p style="font-size: 20p; color: #1A1A1A; line-height: 1.5;">
+                Stay cozy and stylish with our Flannel Jacket with Zipper, designed for both comfort and versatility. 
+                Made from premium flannel fabric, this jacket offers a soft and warm feel, perfect for layering during chilly days.
+            </p>
+            
+            <!-- Tombol Beli -->
+            <button style="
+                background-color: #1A1A1A; 
+                color: #F8F7F3; 
+                border: none; 
+                padding: 15px 8rem; 
+                border-radius: 50px; 
+                font-size: 1rem; 
+                font-weight: 100; 
+                cursor: pointer; 
+                transition: all 0.3s ease; 
+                margin-top: 20px;
+            ">
+                Buy Now
+            </button>
+        </div>
+    </div>
+</section>
+
+
+                <!-- catalog -->
                 <section style="padding: 60px; background-color: #F8F7F3; text-align: center;">
                     <h1 style="font-size: 2rem; font-weight: bold; color: #1A1A1A; margin-bottom: 10px;">Catalog</h1>
-                    <p style="font-size: 1rem; color: #1A1A1A; margin-bottom: 30px;">12 Product Found</p>
+                    <p style="display: flex; justify-content: flex-start; font-size: 20px; color: #1A1A1A; margin-bottom: 30px;">12 Product Found</p>
                     
-                    <div id="product-container"></div>
-                    <script>
-                        addProductCard("product-container", "image/product/loverz.svg", "Black Trucker", "Rp 2.500.000");
-                    </script>
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; justify-content: center;">
+                        <!-- Product Item -->
+                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
+                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                                <img src="image/product/knit.svg"alt= "B&W Loafers" style="width: 100%; height: auto; border-radius: 8px;">
+                            </div>
+                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Knit polo Shirt</h2>
+                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 700.000</p>
+                        </div>
+
+                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
+                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                                <img src="image/product/knit.svg"alt= "B&W Loafers" style="width: 100%; height: auto; border-radius: 8px;">
+                            </div>
+                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Knit polo Shirt</h2>
+                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 700.000</p>
+                        </div>
 
                         
 
-                       
                         
-
+                    
+                    </div>
                 </section>
         
-    
