@@ -1,231 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="margin: 0; padding: 0; box-sizing: border-box;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christian Wijaya</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="margin: 0; padding: 0; font-family: 'Poppins', sans-serif; overflow-x: hidden;">
     <!-- Header Section -->
-    <header>
-        <div class="logo"> 
-            <img src="image/index/LOGO.svg">
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 40px 60px; background-color: #1A1A1A; color: white;">
+        <div style="font-family: 'Garamond', serif; font-size: 2.5rem; font-weight: bold;"> 
+        <img src="image/index/LOGO.svg">
         </div>
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="product.html">Product</a>
-            <a href="about.html">About us</a>
+        <div style="display: flex; gap: 65px; align-items: center;">
+            <a href="index.html" style="font-family: 'Poppins', sans-serif; font-size: 20px; cursor: pointer; font-weight: 600; text-decoration: none; color: #f8f7f3">Home</a>
+            <a href="product.html" style="font-family: 'Poppins', sans-serif; font-size: 20px; cursor: pointer; text-decoration: none; color: #f8f7f3;">Product</a>
+            <a href="about.html" style="font-family: 'Poppins', sans-serif; font-size: 20px; cursor: pointer; text-decoration: none; color: #f8f7f3;">About us</a>
         </div>
         
-        <div class="header-actions">
-            <div class="cart-icon"> 
-                <img src="image/index/prime_shopping-cart.svg">
+        <div style="display: flex; gap: 40px; align-items: center;">
+            <div style="font-size: 1.5rem; cursor: pointer;"> 
+            <img src="image/index/prime_shopping-cart.svg">
             </div>
-            <button href ="event.html"class="btn-primary">Join Event</button>
+            <button style="background-color: #F8F7F3; color: #1A1A1A; border: none; padding: 10px 25px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease;">Join Event</button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <img src="image/index/BANNER.svg" alt="Fashion Models">
-        <p class="hero-title">CHRISTIAN WIJAYA</p>
+    <section style="position: relative; height: 80vh; background-color: #3A3A3A; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+        <img src="image/index/BANNER.svg" alt="Fashion Models" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
+        <p style="font-family: 'Garamond', serif; font-size: 96px; color: white; text-align: center; z-index: 1; letter-spacing: 5px;">CHRISTIAN WIJAYA</p>
     </section>
 
+
     <!-- Discover Section -->
-    <section class="discover">
-        <p class="section-title">
+    <section style="padding: 70px; background-color: #F8F7F3;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 50px; color: #1A1A1A;">
             Discover New Collection
         </p>
-        <div class="collection-grid">
-            <div class="collection-item">
-                <img src="image/index/FOOTWEAR.svg" alt="Footwear">
-                <p class="item-title">
+        <div style="display: flex; justify-content: space-between; gap: 30px;">
+            <div style="flex: 1; text-align: center;">
+                <img src="image/index/FOOTWEAR.svg" 
+                     alt="Footwear" 
+                     style="width: 100%; object-fit: cover; object-position: left center; margin-bottom: 20px;">
+                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 10px; color: #1A1A1A;">
                     Footwear
                 </p>
             </div>
-            <div class="collection-item">
-                <img src="image/index/APPAREL.svg" alt="High End Apparel">
-                <p class="item-title">
+            <div style="flex: 1; text-align: center;">
+                <img src="image/index/APPAREL.svg" 
+                     alt="High End Apparel" 
+                     style="width: 100%;  object-fit: cover; object-position: center center; margin-bottom: 20px;">
+                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 10px; color: #1A1A1A;">
                     High End Apparel
                 </p>
             </div>
-            <div class="collection-item">
-                <img src="image/index/Group 32.svg" alt="Accessories">
-                <p class="item-title">
+            <div style="flex: 1; text-align: center;">
+                <img src="image/index/Group 32.svg" 
+                     alt="Accessories" 
+                     style="width: 100%; object-fit: cover; object-position: right center; margin-bottom: 20px;">
+                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 10px; color: #1A1A1A;">
                     Accessories
                 </p>
             </div>
         </div>
-        <div class="center-btn">
-            <a href="#" class="btn-outline">
+        <div style="display: flex; justify-content: center; margin-top: 50px;">
+            <a href="product.html" style="display: inline-block; border: 1px solid #1A1A1A; padding: 10px 40px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; text-decoration: none; color: #1A1A1A;">
                 Discover
             </a>
         </div>
     </section>
     
     <!-- Model Section -->
-    <section class="model-section">
-        <div class="model-image">
-            <img src="image/index/model.svg" alt="Top Model Image">
+    <section style="display: flex; height: 500px;">
+    
+        <div style="flex: 1;">
+            <img src="image/index/model.svg" 
+                 alt="Top Model Image" 
+                 style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <div class="model-content">
-            <p class="model-title">
+    
+        
+        <div style="flex: 1; background-color: #4A322E; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 50px;">
+            <p style="font-family: 'Poppins', serif; font-size: 4.75rem; text-align: center; margin-bottom: 5rem; line-height: 1.2;">
                 Be the next our<br>Top Model
             </p>
-            <button class="btn-outline-light">
+            <button href= "event.html" style="background-color: transparent; color: white; border: 2px solid white; padding: 15px 50px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1.2rem; cursor: pointer; transition: all 0.3s ease;">
                 Join Now
             </button>
         </div>
     </section>
     
+
     <!-- Collections Section -->
-    <section class="collections">
-        <p class="section-title">
+    <section style="padding: 80px; background-color: #F8F7F3;">
+        <p style="font-family: 'Poppins', sans-serif; font-size: 40px; text-align: center; margin-bottom: 50px; color: #1A1A1A;">
             Christian Wijaya Collections
         </p>
-        <div class="collection-grid">
-            <!-- Product 1 -->
-            <div class="collection-item">
-                <img src="image/index/baju.svg" alt="Knit Polo Shirt">
-                <p class="item-title">Knit Polo Shirt</p>
+        <div style="display: flex; justify-content: space-between; gap: 30px;">
+           
+            <div style="flex: 1; text-align: center;">
+                <img src="image/index/baju.svg" alt="Knit Polo Shirt" style="width: 100%; height: auto; max-height: 400px; object-fit: cover;  padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 10px; color: #1A1A1A;">Knit Polo Shirt</p>
             </div>
-            <!-- Product 2 -->
-            <div class="collection-item">
-                <img src="image/index/lovers.svg" alt="Black And White Loafers">
-                <p class="item-title">Black And White Loafers</p>
+           
+            <div style="flex: 1; text-align: center;">
+                <img src="image/index/lovers.svg" alt="Black And White Loafers" style="width: 100%; height: auto; max-height: 400px; object-fit: cover;  padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 10px; color: #1A1A1A;">Black And White Loafers</p>
             </div>
-            <!-- Product 3 -->
-            <div class="collection-item">
-                <img src="image/index/jacket.svg" alt="Carmy Jacket">
-                <p class="item-title">Carmy Jacket</p>
+            
+            <div style="flex: 1; text-align: center;">
+                <img src="image/index/jacket.svg" alt="Carmy Jacket" style="width: 100%; height: auto; max-height: 400px; object-fit: cover;  padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 10px; color: #1A1A1A;">Carmy Jacket</po>
             </div>
         </div>
-        <!-- Discover Button -->
-        <div class="center-btn">
-            <a href="#" class="btn-outline">
+       
+        <div style="display: flex; justify-content: center; margin-top: 50px;">
+            <a href="product.html" style="display: inline-block; border: 1px solid #1A1A1A; padding: 10px 40px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; text-decoration: none; color: #1A1A1A;">
                 Discover
             </a>
         </div>
     </section>
     
+
+
     <!-- About Section -->
-    <section class="about-banner">
-        <p class="about-title">
+    <section style="background-color: #c2b49a; padding: 40px 0; text-align: center;">
+        <p style="font-family: 'Poppins', serif; font-size: 2.5rem; color: #1A1A1A; margin: 0; font-weight: 100;">
             About Us
         </p>
     </section>
     
-    <section class="about-content">
-        <div class="about-text">
-            <p>
+    <section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 70px 10%; background-color: #F8F7F3;">
+        <div style="flex: 1; max-width: 600px;">
+            <p style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.8; color: #1A1A1A; margin-bottom: 30px; text-align: left;">
                 Christian Wijaya is a luxury fashion brand celebrated for its timeless elegance and modern sophistication.
                 Known for blending classic styles with contemporary innovation, the brand crafts high-end apparel, accessories,
                 and footwear that exude exclusivity and refinement.
             </p>
-            <div>
-                <a href="#" class="btn-outline">
+            <div style="text-align: left;">
+                <a href="about.html" style="display: inline-block; border: 1px solid #1A1A1A; padding: 12px 40px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; text-decoration: none; color: #1A1A1A; background-color: transparent;">
                     Discover
                 </a>
             </div>
         </div>
-        <div class="about-logo">
-            <img src="image/index/logob.svg" alt="CW Logo">
+        <div style=" display: flex; justify-content: center; align-items: center; ">
+            <img src="image/index/logob.svg" alt="CW Logo" style="width: 100%; ">
         </div>
     </section>
     
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>Company</h3>
-                <a href="#">About Us</a>
-                <a href="#">Our Story</a>
-                <a href="#">Sustainability</a>
-                <a href="#">Careers</a>
+    
+    <footer style="padding: 50px 10%; background-color: #EAE6DA;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A;">Company</h3>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 5px 0;">About Us</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 5px 0;">Our Story</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 5px 0;">Sustainability</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 5px 0;">Careers</a>
             </div>
-            <div class="footer-column">
-                <h3>Shop</h3>
-                <a href="#">New Arrivals</a>
-                <a href="#">Best Sellers</a>
-                <a href="#">Collections</a>
-                <a href="#">Gift Cards</a>
+            <div sty le="flex: 1; min-width: 200px;">
+                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A;">Shop</h3>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 5px 0;">New Arrivals</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 5px 0;">Best Sellers</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 5px 0;">Collections</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 5px 0;">Gift Cards</a>
             </div>
-            <div class="footer-column">
-                <h3>Stay Connected</h3>
-                <div class="social-icons">
-                    <a href="#" class="social-icon instagram">
-                        <img src="instagram-icon.svg" alt="Instagram">
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A;">Stay Connected</h3>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#" style="width: 50px; height: 50px; background-color: #F58529; border-radius: 8px; display: flex; justify-content: center; align-items: center;">
+                        <img src="instagram-icon.svg" alt="Instagram" style="width: 24px; height: 24px;">
                     </a>
-                    <a href="#" class="social-icon youtube">
-                        <img src="youtube-icon.svg" alt="YouTube">
+                    <a href="#" style="width: 50px; height: 50px; background-color: #FF0000; border-radius: 8px; display: flex; justify-content: center; align-items: center;">
+                        <img src="youtube-icon.svg" alt="YouTube" style="width: 24px; height: 24px;">
                     </a>
                 </div>
             </div>
         </div>
     </footer>
     
+
     <!-- Brand Footer -->
-    <footer class="brand-footer">
+    <footer style="padding: 40px 0; background-color: #1A1A1A; color: white; text-align: center; font-family: 'Garamond', serif; font-size: 2rem;">
         Christian Wijaya
     </footer>
 
-    <script>
-        // Simple JavaScript for navigation
-        document.addEventListener('DOMContentLoaded', function() {
-            const navItems = document.querySelectorAll('.nav-links a');
-            
-            navItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    navItems.forEach(nav => nav.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-
-            // Cart functionality
-            const cartIcon = document.querySelector('.cart-icon');
-            cartIcon.addEventListener('click', function() {
-                alert('Shopping cart will be implemented here');
-            });
-
-            // Join Event button
-            const joinBtn = document.querySelector('.btn-primary');
-            joinBtn.addEventListener('click', function() {
-                alert('Join Event form will be displayed here');
-            });
-
-            // Join Now button
-            const modelBtn = document.querySelector('.btn-outline-light');
-            modelBtn.addEventListener('click', function() {
-                alert('Model application form will be displayed here');
-            });
-
-            // Discover buttons
-            const discoverBtns = document.querySelectorAll('.btn-outline');
-            discoverBtns.forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    alert('Discover more collections here');
-                });
-            });
-
-            // Social icons hover effect
-            const socialIcons = document.querySelectorAll('.social-icon');
-            socialIcons.forEach(icon => {
-                icon.addEventListener('mouseover', function() {
-                    this.style.backgroundColor = '#D4AF37';
-                });
-                
-                icon.addEventListener('mouseout', function() {
-                    if (this.classList.contains('instagram')) {
-                        this.style.backgroundColor = '#F58529';
-                    } else if (this.classList.contains('youtube')) {
-                        this.style.backgroundColor = '#FF0000';
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
-
