@@ -11,50 +11,7 @@
 </head>
 <body>
 
-    <h2>Form 1: Pendaftaran</h2>
-    <form class="form-container" id="form1">
-        Nama: <input type="text" name="nama"><br>
-        Email: <input type="email" name="email"><br>
-        <button type="submit">Submit</button>
-    </form>
 
-    <h2>Form 2: Login</h2>
-    <form class="form-container" id="form2">
-        Username: <input type="text" name="username"><br>
-        Password: <input type="password" name="password"><br>
-        <button type="submit">Login</button>
-    </form>
-
-    <h2>Form 3: Feedback</h2>
-    <form class="form-container" id="form3">
-        Pesan: <textarea name="pesan"></textarea><br>
-        <button type="submit">Kirim</button>
-    </form>
-
-    <h2>Form 4: Pemesanan Produk</h2>
-    <form class="form-container" id="form4">
-        Produk: <input type="text" name="produk"><br>
-        Jumlah: <input type="number" name="jumlah"><br>
-        <button type="submit">Pesan</button>
-    </form>
-
-    <h2>Form 5: Survey</h2>
-    <form class="form-container" id="form5">
-        Apakah Anda puas? 
-        <input type="radio" name="puas" value="Ya"> Ya
-        <input type="radio" name="puas" value="Tidak"> Tidak<br>
-        <button type="submit">Kirim</button>
-    </form>
-
-    <script>
-        // Validasi sederhana untuk semua form
-        document.querySelectorAll("form").forEach(form => {
-            form.addEventListener("submit", function(event) {
-                event.preventDefault(); // Mencegah submit ke server
-                alert("Form " + this.id + " berhasil dikirim!");
-            });
-        });
-    </script>
 
 </body>
 </html>
