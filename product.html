@@ -5,239 +5,279 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./component/product-card.js" defer></script>
     <title>Christian Wijaya</title>
+    
 </head>
 <body style="margin: 0; padding: 0; font-family: 'Poppins', sans-serif; overflow-x: hidden;">
-
-    <style>
-    .parallax {
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-    }
-    </style>
     
-    <!-- Header Section -->
-    <header style="display: flex; justify-content: space-between; align-items: center; padding: 40px 60px; background-color: #1A1A1A; color: white;">
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 40px 60px; background-color: #1A1A1A; color: white; position: relative; flex-wrap: wrap;" id="header">
         <div style="font-family: 'Garamond', serif; font-size: 2.5rem; font-weight: bold;"> 
-            <img src="image/index/LOGO.svg">
-        </div>
-        <div style="display: flex; gap: 65px; align-items: center;">
+            <img src="image/index/LOGO.svg" style="max-width: 100%; height: auto;">
+        </div>      
+        <div class="desktop-nav" style="display: flex; gap: 65px; align-items: center;">
             <a href="index.html" style="font-family: 'Poppins', sans-serif; font-size: 20px; cursor: pointer; text-decoration: none; color: #f8f7f3">Home</a>
             <a href="product.html" style="font-family: 'Poppins', sans-serif; font-size: 20px; cursor: pointer; font-weight: 600; text-decoration: none; color: #f8f7f3;">Product</a>
             <a href="about.html" style="font-family: 'Poppins', sans-serif; font-size: 20px; cursor: pointer; text-decoration: none; color: #f8f7f3;">About us</a>
         </div>
         <div style="display: flex; gap: 40px; align-items: center;">
             <div style="font-size: 1.5rem; cursor: pointer;"> 
-                <img src="image/index/prime_shopping-cart.svg">
+                <img src="image/index/prime_shopping-cart.svg" style="max-width: 100%; height: auto;">
             </div>
             <button href="event.html" style="background-color: #Fff; color: #1A1A1A; border: none; padding: 10px 25px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease;">Join Event</button>
         </div>
     </header>
 
-    
-
     <!--lastest item-->
     <section style="
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    padding: 60px; 
-    padding-bottom: 10rem; 
-    background-color: #Fff;
-">
-   
-    <p style="font-size: 1.2rem;  font-weight: 600;  color: #1A1A1A; text-align: center;  margin-bottom: 30px; ">
-        Latest Item
-    </p>
-
-    <div style=" display: flex;  align-items: center;  justify-content: center; gap: 130px; flex-direction: row;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        padding: 60px 20px; 
+        padding-bottom: 5rem; 
+        background-color: #Fff;
     ">
+   
+        <p style="font-size: 1.2rem; font-weight: 600; color: #1A1A1A; text-align: center; margin-bottom: 30px;">
+            Latest Item
+        </p>
+
+        <div style="
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 30px; 
+            flex-direction: row;
+            flex-wrap: wrap;
+        ">
       
-        <div style="padding: 20px;">
-            <img src="image/product/flanel.svg" alt="Flannel Jacket" style="width: 350px; height: auto; display: block;">
+            <div style="padding: 20px;">
+                <img src="image/product/flanel.svg" alt="Flannel Jacket" style="width: 100%; max-width: 350px; height: auto; display: block;">
+            </div>
+
+            <div style="max-width: 500px; padding: 0 15px;">
+                <h1 style="font-size: 36px; font-weight: bold; color: #1A1A1A;">Flannel Jacket</h1>
+                <p style="font-size: 24px; color: #1A1A1A; font-weight: 100;">Rp 3.599.000</p>
+                <p style="font-size: 16px; color: #1A1A1A; line-height: 1.5;">
+                    Stay cozy and stylish with our Flannel Jacket with Zipper, designed for both comfort and versatility. 
+                    Made from premium flannel fabric, this jacket offers a soft and warm feel, perfect for layering during chilly days.
+                </p>
+                
+                <button onclick="window.location.href='detail.html'" style="
+                    background-color: #1A1A1A; 
+                    color: #F8F7F3; 
+                    border: none; 
+                    padding: 15px 0; 
+                    width: 100%;
+                    max-width: 300px;
+                    border-radius: 50px; 
+                    font-size: 1rem; 
+                    font-weight: 100; 
+                    cursor: pointer; 
+                    transition: all 0.3s ease; 
+                    margin-top: 20px;
+                ">
+                    Buy Now
+                </button>
+            </div>
         </div>
+    </section>
+
+    <!-- catalog -->
+    <section style="padding: 40px 20px; background-color: #FFF; text-align: center;">
+        <h1 style="font-size: 2rem; font-weight: bold; color: #1A1A1A; margin-bottom: 10px;">Catalog</h1>
+        <p style="display: flex; justify-content: flex-start; font-size: 20px; color: #1A1A1A; margin-bottom: 30px; padding-left: 20px;">12 Product Found</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; justify-content: center;">
+            <!-- Product Item -->
+            <div style="padding: 10px; text-align: center; border-radius: 8px;">
+                <div style="padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                    <img src="image/product/knit.svg" alt="B&W Loafers" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
+                </div>
+                <h2 style="display: flex; font-size: 24px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Knit polo Shirt</h2>
+                <p style="display: flex; font-size: 18px; font-weight: 100; color: #1A1A1A; justify-content: flex-start;">Rp 700.000</p>
+            </div>
+
+            <div style="padding: 10px; text-align: center; border-radius: 8px;">
+                <div style="padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                    <img src="image/product/blacktracker.svg" alt="blacktracker" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
+                </div>
+                <h2 style="display: flex; font-size: 24px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Black Trucker</h2>
+                <p style="display: flex; font-size: 18px; font-weight: 100; color: #1A1A1A; justify-content: flex-start;">Rp 2.500.000</p>
+            </div>
+
+            <div style="padding: 10px; text-align: center; border-radius: 8px;">
+                <div style="padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                    <img src="image/product/loafers.svg" alt="loafers" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
+                </div>
+                <h2 style="display: flex; font-size: 24px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">B&W Loafers</h2>
+                <p style="display: flex; font-size: 18px; font-weight: 100; color: #1A1A1A; justify-content: flex-start;">Rp 1.500.000</p>
+            </div>
+
+            <div style="padding: 10px; text-align: center; border-radius: 8px;">
+                <div style="padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                    <img src="image/product/stretpolo.svg" alt="polo" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
+                </div>
+                <h2 style="display: flex; font-size: 24px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Navy Stretch Polo</h2>
+                <p style="display: flex; font-size: 18px; font-weight: 100; color: #1A1A1A; justify-content: flex-start;">Rp 699.000</p>
+            </div>
+
+            <div style="padding: 10px; text-align: center; border-radius: 8px;">
+                <div style="padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                    <img src="image/product/gortex.svg" alt="gortex" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
+                </div>
+                <h2 style="display: flex; font-size: 24px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">GoreTex Sneakers</h2>
+                <p style="display: flex; font-size: 18px; font-weight: 100; color: #1A1A1A; justify-content: flex-start;">Rp 5.999.999</p>
+            </div>
+
+            <div style="padding: 10px; text-align: center; border-radius: 8px;">
+                <div style="padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                    <img src="image/product/gold.svg" alt="gold" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
+                </div>
+                <h2 style="display: flex; font-size: 24px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Gold Bracelet</h2>
+                <p style="display: flex; font-size: 18px; font-weight: 100; color: #1A1A1A; justify-content: flex-start;">Rp 7.499.000</p>
+            </div>
+
+            <div style="padding: 10px; text-align: center; border-radius: 8px;">
+                <div style="padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                    <img src="image/product/overshirt.svg" alt="overshirt" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
+                </div>
+                <h2 style="display: flex; font-size: 24px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Green Overshirt</h2>
+                <p style="display: flex; font-size: 18px; font-weight: 100; color: #1A1A1A; justify-content: flex-start;">Rp 599.000</p>
+            </div>
+
+            <div style="padding: 10px; text-align: center; border-radius: 8px;">
+                <div style="padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                    <img src="image/product/carmy.svg" alt="overshirt" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
+                </div>
+                <h2 style="display: flex; font-size: 24px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Carmy Jacket</h2>
+                <p style="display: flex; font-size: 18px; font-weight: 100; color: #1A1A1A; justify-content: flex-start;">Rp 2.499.000</p>
+            </div>
+
+            <div style="padding: 10px; text-align: center; border-radius: 8px;">
+                <div style="padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                    <img src="image/product/denim.svg" alt="overshirt" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
+                </div>
+                <h2 style="display: flex; font-size: 24px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Denim Jacket</h2>
+                <p style="display: flex; font-size: 18px; font-weight: 100; color: #1A1A1A; justify-content: flex-start;">Rp 1.799.000</p>
+            </div>
+
+            <div style="padding: 10px; text-align: center; border-radius: 8px;">
+                <div style="padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                    <img src="image/product/tie.svg" alt="tie" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
+                </div>
+                <h2 style="display: flex; font-size: 24px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Elegant Tie</h2>
+                <p style="display: flex; font-size: 18px; font-weight: 100; color: #1A1A1A; justify-content: flex-start;">Rp 399.000</p>
+            </div>
+
+            <div style="padding: 10px; text-align: center; border-radius: 8px;">
+                <div style="padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                    <img src="image/product/rings.svg" alt="rings" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
+                </div>
+                <h2 style="display: flex; font-size: 24px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Carmen Rings</h2>
+                <p style="display: flex; font-size: 18px; font-weight: 100; color: #1A1A1A; justify-content: flex-start;">Rp 8.999.000</p>
+            </div>
+
+            <div style="padding: 10px; text-align: center; border-radius: 8px;">
+                <div style="padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
+                    <img src="image/product/rugby.svg" alt="rugby" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
+                </div>
+                <h2 style="display: flex; font-size: 24px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Rugby Shirt</h2>
+                <p style="display: flex; font-size: 18px; font-weight: 100; color: #1A1A1A; justify-content: flex-start;">Rp 99.000</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding-top: 60px; padding-left: 20px; padding-right: 20px; padding-bottom: 30px;">
+        <hr style="border: none; height: 1px; background-color: #000; margin: 0 2.5px;">
+    
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px;">
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A; margin-bottom: 25px;">Company</h3>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">About Us</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Our Story</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Sustainability</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Careers</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Press</a>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A; margin-bottom: 25px;">Shop</h3>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">New Arrivals</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Best Sellers</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Collections</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Gift Cards</a>
+                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Sale</a>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A;">Stay Connected</h3>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#" style="width: 50px; height: 50px; background-color: #d9d9d9; border-radius: 12px; display: flex; justify-content: center; align-items: center;">
+                        <img src="image/instagram.svg" alt="Instagram" style="width: 45px; height: 45px;">
+                    </a>
+                    <a href="#" style="width: 50px; height: 50px; background-color: #d9d9d9; border-radius: 12px; display: flex; justify-content: center; align-items: center;">
+                        <img src="image/youtube.svg" alt="YouTube" style="width: 45px; height: 45px; ">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <footer style="padding: 20px 0; margin-top: 20px; margin-bottom: 20px; background-color: #fff; color: #1A1A1A; text-align: center; font-family: 'Garamond', serif; font-size: 1.5rem;">
+        Christian Wijaya
+    </footer>
+
+    <style>
+        
+        a:hover, button:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
 
         
-        <div style="max-width: 500px;">
-            <h1 style="font-size: 48px; font-weight: bold; color: #1A1A1A; ">Flannel Jacket</h1>
-            <p style="font-size: 32px; color: #1A1A1A; font-weight: 100; padding-top: -10rem;">Rp 3.599.000</p>
-            <p style="font-size: 20p; color: #1A1A1A; line-height: 1.5;">
-                Stay cozy and stylish with our Flannel Jacket with Zipper, designed for both comfort and versatility. 
-                Made from premium flannel fabric, this jacket offers a soft and warm feel, perfect for layering during chilly days.
-            </p>
-            
-            
-            <button onclick="window.location.href='detail.html' "style="
-                background-color: #1A1A1A; 
-                color: #F8F7F3; 
-                border: none; 
-                padding: 15px 8rem; 
-                border-radius: 50px; 
-                font-size: 1rem; 
-                font-weight: 100; 
-                cursor: pointer; 
-                transition: all 0.3s ease; 
+        html {
+            scroll-behavior: smooth;
+        }
+
+       
+        @media (max-width: 1200px) {
+            header {
+                padding: 40px 30px;
+            }
+            footer {
+                padding: 50px 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            header div:nth-child(2), header div:nth-child(3) {
                 margin-top: 20px;
-            ">
-                Buy Now
-            </button>
-        </div>
-    </div>
-</section>
+            }
+            footer div {
+                margin-left: 0;
+            }
+        }
 
-
-                <!-- catalog -->
-                <section style="padding: 60px; background-color: #FFF; text-align: center;">
-                    <h1 style="font-size: 2rem; font-weight: bold; color: #1A1A1A; margin-bottom: 10px;">Catalog</h1>
-                    <p style="display: flex; justify-content: flex-start; font-size: 20px; color: #1A1A1A; margin-bottom: 30px;">12 Product Found</p>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; justify-content: center;">
-                        <!-- Product Item -->
-                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
-                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
-                                <img src="image/product/knit.svg"alt= "B&W Loafers" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
-                            </div>
-                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Knit polo Shirt</h2>
-                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 700.000</p>
-                        </div>
-
-                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
-                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
-                                <img src="image/product/blacktracker.svg"alt= "blacktracker" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
-                            </div>
-                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Black Trucker</h2>
-                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 2.500.000</p>
-                        </div>
-
-                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
-                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
-                                <img src="image/product/loafers.svg"alt= "loafers" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
-                            </div>
-                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">B&W Loafers</h2>
-                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 1.500.000</p>
-                        </div>
-
-                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
-                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
-                                <img src="image/product/stretpolo.svg"alt= "polo" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
-                            </div>
-                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Navy Stretch Polo</h2>
-                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 699.000</p>
-                        </div>
-
-                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
-                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
-                                <img src="image/product/gortex.svg"alt= "gortex" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
-                            </div>
-                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">GoreTex Sneakers</h2>
-                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 5.999.999</p>
-                        </div>
-
-                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
-                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
-                                <img src="image/product/gold.svg"alt= "gold" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
-                            </div>
-                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Gold Bracelet</h2>
-                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 7.499.000</p>
-                        </div>
-
-                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
-                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
-                                <img src="image/product/overshirt.svg"alt= "overshirt" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
-                            </div>
-                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Green Overshirt</h2>
-                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 599.000</p>
-                        </div>
-
-                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
-                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
-                                <img src="image/product/carmy.svg"alt= "overshirt" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
-                            </div>
-                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Carmy Jacket</h2>
-                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 2.499.000</p>
-                        </div>
-
-                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
-                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
-                                <img src="image/product/denim.svg"alt= "overshirt" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
-                            </div>
-                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Denim Jacket</h2>
-                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 1.799.000</p>
-                        </div>
-
-                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
-                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
-                                <img src="image/product/tie.svg"alt= "tie" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
-                            </div>
-                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Elegant Tie</h2>
-                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 399.000</p>
-                        </div>
-
-                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
-                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
-                                <img src="image/product/rings.svg"alt= "rings" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
-                            </div>
-                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Carmen Rings</h2>
-                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 8.999.000</p>
-                        </div>
-
-                        <div style=" padding: 20px; text-align: center; border-radius: 8px; ">
-                            <div style=" padding: 20px; text-align: center; border-radius: 8px; background-color: #C2B49A;">
-                                <img src="image/product/rugby.svg"alt= "rugby" style="width: 100%; height: auto; border-radius: 8px;" onclick="window.location.href='detail.html'">
-                            </div>
-                            <h2 style="display: flex; font-size: 32px; font-weight: 500; color: #1A1A1A; margin-top: 10px; justify-content: flex-start;">Rugby Shirt</h2>
-                            <p style="display: flex; font-size: 20px;  font-weight: 100;  color: #1A1A1A; justify-content: flex-start;">Rp 99.000</p>
-                        </div>
-
-                        
-                    
-                        
-                      
-                    </div>
-                </section>
-
-                <footer style="padding-top: 100px; padding-left: 30px; padding-right: 30px; padding-bottom: 50px; ">
-                    
-                    <hr style="border: none; height: 1px; background-color: #000; margin: 0 2.5px;">
-                
-                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-                        <div style="flex: 1; min-width: 200px;">
-                            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A; margin-bottom: 25px;">Company</h3>
-                            <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">About Us</a>
-                            <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Our Story</a>
-                            <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Sustainability</a>
-                            <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Careers</a>
-                            <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Press</a>
-                        </div>
-                        <div style="flex: 1; min-width: 200px;">
-                            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A; margin-bottom: 25px;">Shop</h3>
-                            <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">New Arrivals</a>
-                            <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Best Sellers</a>
-                            <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Collections</a>
-                            <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Gift Cards</a>
-                            <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Sale</a>
-                        </div>
-                        <div style="flex: 1; min-width: 200px; margin-left: 350px;">
-                            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A;">Stay Connected</h3>
-                            <div style="display: flex; gap: 15px;">
-                                <a href="#" style="width: 50px; height: 50px; background-color: #d9d9d9; border-radius: 12px; display: flex; justify-content: center; align-items: center;">
-                                    <img src="image/instagram.svg" alt="Instagram" style="width: 45px; height: 45px;">
-                                </a>
-                                <a href="#" style="width: 50px; height: 50px; background-color: #d9d9d9; border-radius: 12px; display: flex; justify-content: center; align-items: center;">
-                                    <img src="image/youtube.svg" alt="YouTube" style="width: 45px; height: 45px; ">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-                
-                
-            
-                
-                <footer style="padding: 40px 0; margin-top: 20px; margin-bottom: 20px; background-color: #fff; color: #1A1A1A; text-align: center; font-family: 'Garamond', serif; font-size: 2rem;">
-                    Christian Wijaya
-                </footer>
-
+       
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
 
         
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 5s ease, transform 5s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</body>
+</html>
