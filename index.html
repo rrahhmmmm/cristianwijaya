@@ -1,233 +1,156 @@
 <!DOCTYPE html>
-<html lang="en" style="margin: 0; padding: 0; box-sizing: border-box;">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christian Wijaya</title>
-    <style>
-        
-        a:hover, button:hover {
-            opacity: 0.8;
-            transform: scale(1.05);
-        }
-
-        
-        html {
-            scroll-behavior: smooth;
-        }
-
-       
-        @media (max-width: 1200px) {
-            header {
-                padding: 40px 30px;
-            }
-            footer {
-                padding: 50px 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            header div:nth-child(2), header div:nth-child(3) {
-                margin-top: 20px;
-            }
-            footer div {
-                margin-left: 0;
-            }
-        }
-
-       
-        .parallax {
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-        }
-
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 5s ease, transform 5s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
-<body style="margin: 0; padding: 0; font-family: 'Poppins', sans-serif; overflow-x: hidden;">
+<body>
 
-    <header style="display: flex; justify-content: space-between; align-items: center; padding: 40px 60px; background-color: #1A1A1A; color: white;">
-        <div style="font-family: 'Garamond', serif; font-size: 2.5rem; font-weight: bold;"> 
+    <header>
+        <div> 
             <img src="image/index/LOGO.svg">
         </div>
-        <div style="display: flex; gap: 65px; align-items: center;">
-            <a href="index.html" style="font-family: 'Poppins', sans-serif; font-size: 20px; cursor: pointer; font-weight: 600; text-decoration: none; color: #f8f7f3">Home</a>
-            <a href="product.html" style="font-family: 'Poppins', sans-serif; font-size: 20px; cursor: pointer; text-decoration: none; color: #f8f7f3;">Product</a>
-            <a href="about.html" style="font-family: 'Poppins', sans-serif; font-size: 20px; cursor: pointer; text-decoration: none; color: #f8f7f3;">About us</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="product.html">Product</a>
+            <a href="about.html">About us</a>
         </div>
-        <div style="display: flex; gap: 40px; align-items: center;">
-            <div style="font-size: 1.5rem; cursor: pointer;"> 
+        <div class="nav-actions">
+            <div> 
                 <img src="image/index/prime_shopping-cart.svg">
             </div>
-            <button href="event.html" style="background-color: #Fff; color: #1A1A1A; border: none; padding: 10px 25px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease;">Join Event</button>
+            <button href="event.html">Join Event</button>
         </div>
     </header>
 
-    <section class="parallax" style="position: relative; height: 80vh; background-color: #3A3A3A; display: flex; justify-content: center; align-items: center; overflow: hidden; background-image: url('image/index/BANNER.svg'); background-size: cover; background-position: center;">
-        <p style="font-family: 'Garamond', serif; font-size: 96px; color: white; text-align: center; z-index: 1; letter-spacing: 5px;">CHRISTIAN WIJAYA</p>
+    <section class="parallax banner-section">
+        <p class="banner-title">CHRISTIAN WIJAYA</p>
     </section>
 
-    <section class="fade-in" style="padding: 70px; background-color: #Fff;">
-        <p style="font-family: 'Poppins', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 50px; color: #1A1A1A;">
+    <section class="fade-in discover-section">
+        <p class="discover-heading">
             Discover New Collection
         </p>
-        <div style="display: flex; justify-content: space-between; gap: 30px;">
-            <div style="flex: 1; text-align: center;">
-                <img src="image/index/FOOTWEAR.svg" alt="Footwear" style="width: 100%; object-fit: cover; object-position: left center; margin-bottom: 20px;">
-                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 10px; color: #1A1A1A;">
-                    Footwear
-                </p>
+        <div class="discover-grid">
+            <div class="discover-item">
+                <img src="image/index/FOOTWEAR.svg" alt="Footwear">
+                <p class="discover-title">Footwear</p>
             </div>
-            <div style="flex: 1; text-align: center;">
-                <img src="image/index/APPAREL.svg" alt="High End Apparel" style="width: 100%; object-fit: cover; object-position: center center; margin-bottom: 20px;">
-                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 10px; color: #1A1A1A;">
-                    High End Apparel
-                </p>
+            <div class="discover-item">
+                <img src="image/index/APPAREL.svg" alt="High End Apparel">
+                <p class="discover-title">High End Apparel</p>
             </div>
-            <div style="flex: 1; text-align: center;">
-                <img src="image/index/Group 32.svg" alt="Accessories" style="width: 100%; object-fit: cover; object-position: right center; margin-bottom: 20px;">
-                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 10px; color: #1A1A1A;">
-                    Accessories
-                </p>
+            <div class="discover-item">
+                <img src="image/index/Group 32.svg" alt="Accessories">
+                <p class="discover-title">Accessories</p>
             </div>
         </div>
-        <div style="display: flex; justify-content: center; margin-top: 50px;">
-            <a href="product.html" style="display: inline-block; border: 1px solid #1A1A1A; padding: 10px 40px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; text-decoration: none; color: #1A1A1A;">
-                Discover
-            </a>
+        <div class="discover-button-wrapper">
+            <a href="product.html" class="discover-button">Discover</a>
         </div>
     </section>
 
-    <section style="display: flex; height: 500px;">
-        <div style="flex: 1;">
-            <img src="image/index/model.svg" alt="Top Model Image" style="width: 100%; height: 100%; object-fit: cover;">
+    <section class="top-model-section">
+        <div class="top-model-image">
+            <img src="image/index/model.svg" alt="Top Model Image">
         </div>
-        <div style="flex: 1; background-color: #4A322E; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 50px;">
-            <p style="font-family: 'Poppins', serif; font-size: 4.75rem; text-align: center; margin-bottom: 5rem; line-height: 1.2;">
+        <div class="top-model-content">
+            <p class="top-model-heading">
                 Be the next our<br>Top Model
             </p>
-            <button href="event.html" style="background-color: transparent; color: white; border: 2px solid white; padding: 15px 50px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1.2rem; cursor: pointer; transition: all 0.3s ease;">
-                Join Now
-            </button>
+            <button class="top-model-button" href="event.html">Join Now</button>
         </div>
     </section>
 
-    <section class="fade-in" style="padding: 80px; background-color: #Fff;">
-        <p style="font-family: 'Poppins', sans-serif; font-size: 40px; text-align: center; margin-bottom: 50px; color: #1A1A1A;">
+    <section class="fade-in collection-section">
+        <p class="collection-title">
             Christian Wijaya Collections
         </p>
-        <div style="display: flex; justify-content: space-between; gap: 30px;">
-            <div style="flex: 1; text-align: center;">
-                <img src="image/index/baju.svg" alt="Knit Polo Shirt" style="width: 100%; height: auto; max-height: 400px; object-fit: cover; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
-                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 10px; color: #1A1A1A;">Knit Polo Shirt</p>
+        <div class="collection-cards">
+            <div class="collection-card">
+                <img src="image/index/baju.svg" alt="Knit Polo Shirt" class="collection-image">
+                <p class="collection-label">Knit Polo Shirt</p>
             </div>
-            <div style="flex: 1; text-align: center;">
-                <img src="image/index/lovers.svg" alt="Black And White Loafers" style="width: 100%; height: auto; max-height: 400px; object-fit: cover; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
-                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 10px; color: #1A1A1A;">Black And White Loafers</p>
+            <div class="collection-card">
+                <img src="image/index/lovers.svg" alt="Black And White Loafers" class="collection-image">
+                <p class="collection-label">Black And White Loafers</p>
             </div>
-            <div style="flex: 1; text-align: center;">
-                <img src="image/index/jacket.svg" alt="Carmy Jacket" style="width: 100%; height: auto; max-height: 400px; object-fit: cover; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
-                <p style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 10px; color: #1A1A1A;">Carmy Jacket</p>
+            <div class="collection-card">
+                <img src="image/index/jacket.svg" alt="Carmy Jacket" class="collection-image">
+                <p class="collection-label">Carmy Jacket</p>
             </div>
         </div>
-        <div style="display: flex; justify-content: center; margin-top: 50px;">
-            <a href="product.html" style="display: inline-block; border: 1px solid #1A1A1A; padding: 10px 40px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; text-decoration: none; color: #1A1A1A;">
-                Discover
-            </a>
+        <div class="collection-button-wrapper">
+            <a href="product.html" class="collection-button">Discover</a>
         </div>
     </section>
 
-    <section style="background-color: #c2b49a; padding: 40px 0; text-align: center;">
-        <p style="font-family: 'Poppins', serif; font-size: 2.5rem; color: #1A1A1A; margin: 0; font-weight: 300;">
+    <section class="about-section">
+        <p class="about-title">
             About Us
         </p>
     </section>
 
-    <section style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 70px 10%; background-color: #Fff;">
-        <div style="flex: 1; max-width: 600px;">
-            <p style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.8; color: #1A1A1A; margin-bottom: 30px; text-align: left;">
+    <section class="brand-description-section">
+        <div class="brand-description-text">
+            <p class="brand-description-paragraph">
                 Christian Wijaya is a luxury fashion brand celebrated for its timeless elegance and modern sophistication.
                 Known for blending classic styles with contemporary innovation, the brand crafts high-end apparel, accessories,
                 and footwear that exude exclusivity and refinement.
             </p>
-            <div style="text-align: left;">
-                <a href="about.html" style="display: inline-block; border: 1px solid #1A1A1A; padding: 12px 40px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; text-decoration: none; color: #1A1A1A; background-color: transparent;">
+            <div class="brand-description-button-container">
+                <a href="about.html" class="brand-description-button">
                     Discover
                 </a>
             </div>
         </div>
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="image/index/logob.svg" alt="CW Logo" style="width: 100%;">
+        <div class="brand-description-image">
+            <img src="image/index/logob.svg" alt="CW Logo" />
         </div>
     </section>
+    
+    
+    
 
-    <footer style="padding-top: 100px; padding-left: 30px; padding-right: 30px; padding-bottom: 50px;">
-        <hr style="border: none; height: 1px; background-color: #000; margin: 0 2.5px;">
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-            <div style="flex: 1; min-width: 200px;">
-                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A; margin-bottom: 25px;">Company</h3>
-                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">About Us</a>
-                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Our Story</a>
-                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Sustainability</a>
-                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Careers</a>
-                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Press</a>
+    <footer>
+        <hr>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Company</h3>
+                <a href="#">About Us</a>
+                <a href="#">Our Story</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
             </div>
-            <div style="flex: 1; min-width: 200px;">
-                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A; margin-bottom: 25px;">Shop</h3>
-                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">New Arrivals</a>
-                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Best Sellers</a>
-                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Collections</a>
-                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Gift Cards</a>
-                <a href="#" style="display: block; font-size: 1rem; color: #1A1A1A; text-decoration: none; margin: 15px 0;">Sale</a>
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <a href="#">New Arrivals</a>
+                <a href="#">Best Sellers</a>
+                <a href="#">Collections</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">Sale</a>
             </div>
-            <div style="flex: 1; min-width: 200px; margin-left: 350px;">
-                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.2rem; color: #1A1A1A;">Stay Connected</h3>
-                <div style="display: flex; gap: 15px;">
-                    <a href="#" style="width: 50px; height: 50px; background-color: #d9d9d9; border-radius: 12px; display: flex; justify-content: center; align-items: center;">
-                        <img src="image/instagram.svg" alt="Instagram" style="width: 45px; height: 45px;">
+            <div class="footer-section">
+                <h3>Stay Connected</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <img src="image/instagram.svg" alt="Instagram">
                     </a>
-                    <a href="#" style="width: 50px; height: 50px; background-color: #d9d9d9; border-radius: 12px; display: flex; justify-content: center; align-items: center;">
-                        <img src="image/youtube.svg" alt="YouTube" style="width: 45px; height: 45px;">
+                    <a href="#" class="social-icon">
+                        <img src="image/youtube.svg" alt="YouTube">
                     </a>
                 </div>
             </div>
         </div>
     </footer>
-
-    <footer style="padding: 40px 0; margin-top: 20px; margin-bottom: 20px; background-color: #fff; color: #1A1A1A; text-align: center; font-family: 'Garamond', serif; font-size: 2rem;">
+    
+    <footer class="footer-bottom">
         Christian Wijaya
     </footer>
+    
 
-    <script>
-        // Fade-in effect on scroll
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll('.fade-in');
-            function checkVisibility() {
-                sections.forEach(section => {
-                    const rect = section.getBoundingClientRect();
-                    if (rect.top < window.innerHeight && rect.bottom > 0) {
-                        section.classList.add('visible');
-                    }
-                });
-            }
-            window.addEventListener('scroll', checkVisibility);
-            checkVisibility(); // Initial check
-        });
-    </script>
 </body>
 </html>
