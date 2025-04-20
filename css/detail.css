@@ -370,6 +370,9 @@ html, body {
     color: #1A1A1A;
     justify-content: flex-start;
 }
+.back-arrow {
+    cursor: pointer;
+  }
    
    /* Responsive */
    @media (max-width: 1200px) {
