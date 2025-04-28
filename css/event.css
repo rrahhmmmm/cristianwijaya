@@ -1,4 +1,4 @@
-/* Reset & Font */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@ html, body {
    }
    
    
-   /* Hover Effects */
+ 
    a:hover,
    button:hover {
     opacity: 0.8;
@@ -16,13 +16,13 @@ html, body {
    }
    
    
-   /* Scroll */
+   
    html {
     scroll-behavior: smooth;
    }
    
    
-   /* Header Layout */
+   
    header {
     display: flex;
     justify-content: space-between;
@@ -33,7 +33,7 @@ html, body {
    }
    
    
-   /* Logo Styling */
+   
    .logo {
     font-family: 'Garamond', serif;
     font-size: 2.5rem;
@@ -41,7 +41,7 @@ html, body {
    }
    
    
-   /* Navigation Links */
+   
    .nav-links {
     display: flex;
     gap: 65px;
@@ -59,7 +59,7 @@ html, body {
    }
    
    
-   /* Navigation Actions */
+   
    .nav-actions {
     display: flex;
     gap: 40px;
@@ -93,7 +93,6 @@ html, body {
    
    
    
-   /* Utility Classes */
    .parallax {
     background-attachment: fixed;
     background-size: cover;
@@ -113,7 +112,7 @@ html, body {
     transform: translateY(0);
    }
    
-   /* footer styling */
+   
    footer {
     padding-top: 60px;
     padding-left: 20px;

@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Christian Wijaya</title>
-   <link rel="stylesheet" href="css/event.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christian Wijaya</title>
+  <link rel="stylesheet" href="css/event.css">
 </head>
+
 <body>
 
 
-   <header>
-       <div>
-           <img src="image/index/LOGO.svg">
-       </div>
-       <div class="nav-links">
-           <a href="index.html">Home</a>
-           <a href="product.html">Product</a>
-           <a href="about.html">About us</a>
-       </div>
-       <div class="nav-actions">
-           <div>
-               <img src="image/index/prime_shopping-cart.svg">
-           </div>
-           <a href="event.html" class="event-button"> Join Event</a>
-       </div>
-   </header>
+  <header>
+    <div>
+      <img src="image/index/LOGO.svg">
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="about.html">About us</a>
+    </div>
+    <div class="nav-actions">
+      <div>
+        <img src="image/index/prime_shopping-cart.svg">
+      </div>
+      <a href="event.html" class="event-button"> Join Event</a>
+    </div>
+  </header>
 
-   <section class="form-wrapper">
+  <section class="form-wrapper">
     <form id="multiStepForm">
       <h2>Event Registration</h2>
-  
+
       <div class="steps">
         <div class="step active">Personal Information</div>
         <div class="step">Upload Photo</div>
         <div class="step">Terms & Condition</div>
       </div>
-  
+
       <div class="form-step active" id="step1">
         <div class="input-row">
           <div class="input-group">
@@ -47,7 +49,7 @@
             <input type="date" id="birthDate" />
           </div>
         </div>
-  
+
         <div class="input-row">
           <div class="input-group">
             <label>Email Address</label>
@@ -61,10 +63,10 @@
             </div>
           </div>
         </div>
-  
+
         <button type="button" onclick="nextStep(1)">Continue</button>
       </div>
-  
+
       <div class="form-step" id="step2">
         <label>Upload Photo</label>
         <div class="drop-area">
@@ -73,7 +75,7 @@
         </div>
         <button type="button" onclick="nextStep(2)">Continue</button>
       </div>
-  
+
       <div class="form-step" id="step3">
         <h3>Terms & Condition</h3>
         <div class="terms-box">
@@ -114,72 +116,72 @@
     </form>
   </section>
 
- <script>
-  const formSteps = document.querySelectorAll('.form-step');
-  const stepsIndicator = document.querySelectorAll('.step');
+  <script>
+    const formSteps = document.querySelectorAll('.form-step');
+    const stepsIndicator = document.querySelectorAll('.step');
 
-  function nextStep(currentStep) {
-    if (currentStep === 1) {
-      const name = document.getElementById('fullName').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const birth = document.getElementById('birthDate').value;
-      const gender = document.querySelector('input[name="gender"]:checked');
+    function nextStep(currentStep) {
+      if (currentStep === 1) {
+        const name = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const birth = document.getElementById('birthDate').value;
+        const gender = document.querySelector('input[name="gender"]:checked');
 
-      // 1. Validasi tidak boleh kosong
-      if (name === '' || email === '' || birth === '') {
-        alert('Please fill in all required fields.');
-        return;
+        // 1. Validasi tidak boleh kosong
+        if (name === '' || email === '' || birth === '') {
+          alert('Please fill in all required fields.');
+          return;
+        }
+
+        // 2. Validasi email mengandung "@" dan "."
+        if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+
+        // 3. Validasi tanggal lahir tidak di masa depan
+        const today = new Date();
+        const birthDate = new Date(birth);
+        if (birthDate > today) {
+          alert('Birth date cannot be in the future.');
+          return;
+        }
+
+        // 4. Validasi gender harus dipilih
+        if (!gender) {
+          alert('Please select your gender.');
+          return;
+        }
       }
 
-      // 2. Validasi email mengandung "@" dan "."
-      if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
-        alert('Please enter a valid email address.');
-        return;
+      if (currentStep === 2) {
+        const file = document.getElementById('uploadFile').files[0];
+        // 5. Validasi file harus diupload
+        if (!file) {
+          alert('Please upload a photo.');
+          return;
+        }
       }
 
-      // 3. Validasi tanggal lahir tidak di masa depan
-      const today = new Date();
-      const birthDate = new Date(birth);
-      if (birthDate > today) {
-        alert('Birth date cannot be in the future.');
-        return;
-      }
-
-      // 4. Validasi gender harus dipilih
-      if (!gender) {
-        alert('Please select your gender.');
-        return;
-      }
+      // Pindah ke langkah berikutnya
+      formSteps.forEach(f => f.classList.remove('active'));
+      stepsIndicator.forEach(s => s.classList.remove('active'));
+      formSteps[currentStep].classList.add('active');
+      stepsIndicator[currentStep].classList.add('active');
     }
 
-    if (currentStep === 2) {
-      const file = document.getElementById('uploadFile').files[0];
-      // 5. Validasi file harus diupload
-      if (!file) {
-        alert('Please upload a photo.');
-        return;
+    document.getElementById('multiStepForm').addEventListener('submit', function (e) {
+      const checkbox = document.getElementById('agreeTerms');
+      // 6. Validasi checkbox terms harus dicentang
+      if (!checkbox.checked) {
+        e.preventDefault();
+        alert('You must agree to the terms and conditions before submitting.');
       }
-    }
+    });
+  </script>
 
-    // Pindah ke langkah berikutnya
-    formSteps.forEach(f => f.classList.remove('active'));
-    stepsIndicator.forEach(s => s.classList.remove('active'));
-    formSteps[currentStep].classList.add('active');
-    stepsIndicator[currentStep].classList.add('active');
-  }
 
-  document.getElementById('multiStepForm').addEventListener('submit', function (e) {
-    const checkbox = document.getElementById('agreeTerms');
-    // 6. Validasi checkbox terms harus dicentang
-    if (!checkbox.checked) {
-      e.preventDefault();
-      alert('You must agree to the terms and conditions before submitting.');
-    }
-  });
-</script>
-   
-
-   <section class="steps-section">
+  <section class="steps-section">
     <hr>
     <h2 class="steps-title">Steps to Register</h2>
     <div class="steps-container">
@@ -195,54 +197,52 @@
         <div class="step-circle">3</div>
         <p>Wait for Confirmation</p>
       </div>
-                <div class="step">
-                 <div class="step-circle">4</div>
-                <p>Attend the Audition</p>
-                 </div>
-                </div>
-            </section>
-    <footer>
-       <hr>
-       <div class="footer-content">
-           <div class="footer-section">
-               <h3>Company</h3>
-               <a href="#">About Us</a>
-               <a href="#">Our Story</a>
-               <a href="#">Sustainability</a>
-               <a href="#">Careers</a>
-               <a href="#">Press</a>
-           </div>
-           <div class="footer-section">
-               <h3>Shop</h3>
-               <a href="#">New Arrivals</a>
-               <a href="#">Best Sellers</a>
-               <a href="#">Collections</a>
-               <a href="#">Gift Cards</a>
-               <a href="#">Sale</a>
-           </div>
-           <div class="footer-section">
-               <h3>Stay Connected</h3>
-               <div class="social-icons">
-                   <a href="#" class="social-icon">
-                       <img src="image/instagram.svg" alt="Instagram">
-                   </a>
-                   <a href="#" class="social-icon">
-                       <img src="image/youtube.svg" alt="YouTube">
-                   </a>
-               </div>
-           </div>
-       </div>
-   </footer>
-  
-   <footer class="footer-bottom">
-       Christian Wijaya
-   </footer>
+      <div class="step">
+        <div class="step-circle">4</div>
+        <p>Attend the Audition</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <hr>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Company</h3>
+        <a href="#">About Us</a>
+        <a href="#">Our Story</a>
+        <a href="#">Sustainability</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+      </div>
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <a href="#">New Arrivals</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">Collections</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Sale</a>
+      </div>
+      <div class="footer-section">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+          <a href="#" class="social-icon">
+            <img src="image/instagram.svg" alt="Instagram">
+          </a>
+          <a href="#" class="social-icon">
+            <img src="image/youtube.svg" alt="YouTube">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  
+  <footer class="footer-bottom">
+    Christian Wijaya
+  </footer>
+
+
 
 
 </body>
+
 </html>
-
-
-

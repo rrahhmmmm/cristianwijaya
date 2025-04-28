@@ -1,4 +1,4 @@
-/* Reset & Font */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -7,19 +7,19 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Hover Effects */
+
 a:hover,
 button:hover {
   opacity: 0.8;
   transform: scale(1.05);
 }
 
-/* Scroll */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Header Layout */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -29,14 +29,14 @@ header {
   color: white;
 }
 
-/* Logo Styling */
+
 .logo {
   font-family: 'Garamond', serif;
   font-size: 2.5rem;
   font-weight: bold;
 }
 
-/* Navigation Links */
+
 .nav-links {
   display: flex;
   gap: 65px;
@@ -52,7 +52,7 @@ header {
   color: #f8f7f3;
 }
 
-/* Navigation Actions */
+
 .nav-actions {
   display: flex;
   gap: 40px;
@@ -98,7 +98,7 @@ header {
   z-index: 1;
   letter-spacing: 5px;
 }
-/* Discover Section */
+
 .discover-section {
   padding: 70px;
   background-color: #fff;
@@ -167,7 +167,7 @@ header {
   color: #1A1A1A;
 }
 
-/* Top Model Section */
+
 .top-model-section {
   display: flex;
   height: 500px;
@@ -214,7 +214,7 @@ header {
   transition: all 0.3s ease;
 }
 
-/* section 3 */
+
 .collection-section {
   padding: 80px;
   background-color: #fff;
@@ -280,7 +280,6 @@ header {
 
 
 
-/* Utility Classes */
 .parallax {
   background-attachment: fixed;
   background-size: cover;
@@ -288,7 +287,7 @@ header {
 }
 
 
-/* footer styling */
+
 footer {
   padding-top: 60px;
   padding-left: 20px;
@@ -351,7 +350,7 @@ hr {
   height: 45px;
 }
 
-/* Footer Bottom */
+
 .footer-bottom {
   padding: 20px 0;
   margin-top: 20px;
