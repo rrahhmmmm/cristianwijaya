@@ -116,6 +116,11 @@
     </form>
   </section>
 
+  <div id="successMessage" style="display: none; text-align: center; padding: 50px;">
+    <img src="image/event/ceklist.png" alt="Success" style="width: 80px; height: 80px;" />
+    <h2>You are all done</h2>
+  </div>
+
   <script>
     const formSteps = document.querySelectorAll('.form-step');
     const stepsIndicator = document.querySelectorAll('.step');
@@ -171,13 +176,41 @@
     }
 
     document.getElementById('multiStepForm').addEventListener('submit', function (e) {
-      const checkbox = document.getElementById('agreeTerms');
-      // 6. Validasi checkbox terms harus dicentang
-      if (!checkbox.checked) {
-        e.preventDefault();
-        alert('You must agree to the terms and conditions before submitting.');
-      }
+  e.preventDefault();
+
+  const checkbox = document.getElementById('agreeTerms');
+  if (!checkbox.checked) {
+    alert('You must agree to the terms and conditions before submitting.');
+    return;
+  }
+
+  // Tampilkan success message
+  document.getElementById('successMessage').style.display = 'flex';
+
+  // Sembunyikan form sementara
+  document.getElementById('multiStepForm').style.display = 'none';
+
+  setTimeout(() => {
+    // Sembunyikan pesan sukses
+    document.getElementById('successMessage').style.display = 'none';
+
+    // Tampilkan kembali form
+    document.getElementById('multiStepForm').style.display = 'block';
+
+    // Reset form
+    const form = document.getElementById('multiStepForm');
+    form.reset();
+
+    // Kembalikan ke langkah pertama
+    document.querySelectorAll('.form-step').forEach((f, i) => {
+      f.classList.toggle('active', i === 0);
     });
+    document.querySelectorAll('.step').forEach((s, i) => {
+      s.classList.toggle('active', i === 0);
+    });
+
+  }, 5000);
+});
   </script>
 
 

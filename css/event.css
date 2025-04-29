@@ -346,6 +346,34 @@ html, body {
     cursor: pointer;
     font-size: 16px;
   }
+
+  #successMessage {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 9999;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  #successMessage img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  #successMessage h2 {
+    font-size: 32px;
+    color: #000;
+    font-weight: 600;
+  }
    
    
    
